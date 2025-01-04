@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="342.0" prefWidth="210.0" spacing="10" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupController">
+   <ImageView fitHeight="254.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../../../../../../Downloads/462637767_599252642438501_9195189470999958340_n.png" />
+      </image>
+   </ImageView>
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Signup" textFill="WHITE" />
+
+    <VBox alignment="CENTER" maxWidth="300" spacing="5">
+        <HBox alignment="CENTER" spacing="5">
+            <Label text="Username:" textFill="WHITE" />
+            <TextField fx:id="usernameField" promptText="Enter your username" />
+        </HBox>
+        <HBox alignment="CENTER" spacing="5">
+            <Label text="Email:" textFill="WHITE" />
+            <TextField fx:id="emailField" promptText="Enter your email" />
+        </HBox>
+        <HBox alignment="CENTER" spacing="5">
+            <Label text="Password:" textFill="WHITE" />
+            <PasswordField fx:id="passwordField" promptText="Enter your password" />
+        </HBox>
+    </VBox>
+
+    <Button maxWidth="100" onAction="#handleSignup" text="Signup" />
+    <Label fx:id="errorMessage" textFill="red" visible="false" />
+    <Label fx:id="successMessage" textFill="green" visible="false" />
+</VBox>
