@@ -1,0 +1,8 @@
+controllers\SignupController.class
+controllers\DashboardController.class
+controllers\DashboardController$Application.class
+controllers\SceneController.class
+database\DatabaseInitializer.class
+controllers\LoginController.class
+module-info.class
+com\example\App.class

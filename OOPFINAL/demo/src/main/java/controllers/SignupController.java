@@ -1,11 +1,14 @@
 package controllers;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import com.example.App;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class SignupController {
 

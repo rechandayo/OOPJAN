@@ -1,14 +1,16 @@
 package com.example;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import controllers.LoginController;
+import controllers.SceneController;
+import database.DatabaseInitializer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import database.DatabaseInitializer;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class App extends Application {
 
@@ -23,11 +25,19 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(App.class.getResource("/com/example/Login.fxml"));
-            Scene scene = new Scene(loader.load());
+            SceneController sceneController = new SceneController(primaryStage);
 
+            // Step 2: Set up FXMLLoader and Controller
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("/com/example/Login.fxml"));
+            LoginController loginController = new LoginController(sceneController); // Pass SceneController
+            loader.setController(loginController);
+
+            // Step 3: Load the Scene
+            Scene scene = new Scene(loader.load());
             primaryStage.setTitle("Job Application Manager");
             primaryStage.setScene(scene);
+
+            // Step 4: Show the Stage
             primaryStage.show();
         } catch (Exception e) {
             System.err.println("Failed to load the initial scene.");

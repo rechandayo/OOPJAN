@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS applications (
 );
 
 -- Insert sample data into users table
-INSERT INTO users (username, email, password) VALUES
+INSERT OR IGNORE INTO users (username, email, password) VALUES
 ('testuser', 'test@example.com', 'testpassword');
 
 -- Insert sample data into applications table

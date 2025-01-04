@@ -1,9 +1,10 @@
 package controllers;
 
+import java.io.IOException;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.io.IOException;
 
 public class SceneController {
 
@@ -14,11 +15,11 @@ public class SceneController {
     }
 
     public void switchToLogin() {
-        loadScene("/views/Login.fxml");
+        loadScene("/Login.fxml");
     }
 
     public void switchToSignup() {
-        loadScene("/views/Signup.fxml");
+        loadScene("/Signup.fxml");
     }
 
     private void loadScene(String fxmlPath) {

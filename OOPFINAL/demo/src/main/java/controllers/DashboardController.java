@@ -1,10 +1,5 @@
 package controllers;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
-import javafx.scene.Scene;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,6 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.App;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class DashboardController {
 
